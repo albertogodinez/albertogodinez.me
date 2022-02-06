@@ -1,0 +1,36 @@
+{
+  "name": "albertogodinez.me",
+  "version": "1.0.0",
+  "description": "Personal Website using eleventy, tailwind, and interact.js",
+  "scripts": {
+    "clean": "rimraf public",
+    "dev:tailwind": "npx tailwindcss -i src/css/tailwind.css -o public/css/styles.css --watch",
+    "dev:eleventy": "npx @11ty/eleventy --serve",
+    "build:tailwind": "npx tailwindcss -i src/css/tailwind.css -o public/css/styles.css --minify",
+    "build:eleventy": "ELEVENTY_PRODUCTION=true npx @11ty/eleventy",
+    "dev": "npm-run-all clean --parallel dev:*",
+    "build": "NODE_ENV=production npm-run-all clean build:tailwind build:eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertogodinez/albertogodinez.me.git"
+  },
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "tailwind",
+    "tailwindcss"
+  ],
+  "author": "Alberto Godinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albertogodinez/albertogodinez.me/issues"
+  },
+  "homepage": "https://github.com/albertogodinez/albertogodinez.me#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^3.0.18"
+  }
+}
