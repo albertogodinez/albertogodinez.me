@@ -1,12 +1,11 @@
 <div>
-{# TODO: Consider just adding title and a description instead of the whole thing #}
-{% for note in draggableNotes %}
-<div id="yes-drop" class="drag-drop">
-  <h1>{{note.data.title}}</h1>
-  
-  {% if note.data.position%} <h2>{{note.data.position}}</h2> {%- endif %}
-  
-  <h2>{{note.data.description}}</h2>
-</div>
-{% endfor %}
+  {% for note in draggableNotes %}
+  <div id="yes-drop" class="drag-drop">
+    <h1>{{note.data.title}}</h1>
+    {% if note.data.position%} <h2>{{note.data.position}}</h2> {%- endif %}
+    {# maybe I could add a little tldr: prior to the description #}
+    {% if note.data.description%} <h2>{{note.data.description}}</h2> {%- endif %}
+    <a href="{{ note.url | url }}">see more 👀</a>
+  </div>
+  {% endfor %}
 </div>
