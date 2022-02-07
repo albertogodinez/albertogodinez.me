@@ -1,11 +1,14 @@
-<div>
+<div id="draggableNotes">
   {% for note in draggableNotes %}
-  <div id="yes-drop" class="drag-drop">
+  <div id="yes-drop" class="drag-drop" 
+    data-noteType={{note.data.noteType}} 
+    data-isDraggable={{note.data.isDraggable}}
+  >
     <h1>{{note.data.title}}</h1>
     {% if note.data.position%} <h2>{{note.data.position}}</h2> {%- endif %}
+    {% if note.data.dateRange%} <h2>{{note.data.dateRange}}</h2> {%- endif %}
     {# maybe I could add a little tldr: prior to the description #}
     {% if note.data.description%} <h2>{{note.data.description}}</h2> {%- endif %}
-    {% if note.data.dateRange%} <h2>{{note.data.dateRange}}</h2> {%- endif %}
     {% if note.data.noteType != "education"%} <a href="{{ note.url | url }}">see more 👀</a> {%- endif %}
   </div>
   {% endfor %}

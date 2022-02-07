@@ -5,9 +5,11 @@ title: Home
 <!-- TODO: Make sure that I want to keep this script here or in the layout -->
 <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
 
-<button class="button">Show All</button>
-<button class="button">Experience</button>
-<button class="button">Education</button>
+<button class="button" onclick="handleVisibleNotes('all')">Show All</button>
+<button class="button" onclick="handleVisibleNotes('experience')">Experience</button>
+<button class="button" onclick="handleVisibleNotes('projects')">Projects</button>
+<button class="button" onclick="handleVisibleNotes('education')">Education</button>
+
 <!-- <div id="no-drop" class="drag-drop"> 
   #no-drop2
 </div>
@@ -25,6 +27,36 @@ title: Home
 {% include "draggableNotes.njk" %}
 
 <script>
+  const notes = new Map();
+
+  window.addEventListener("load", () => {
+    [...document.querySelectorAll("[data-isDraggable = true]")].forEach((note) => {
+      const key = note.getAttribute('data-noteType')
+      if (notes.has(key)) {
+        notes.set(notes.get(key).push(note))
+      } else {
+        notes.set(key, [note])
+      }
+    })
+  });
+
+  // handle which notes are shown
+  function handleVisibleNotes (noteType) {
+    const draggableNotes = document.querySelectorAll("[data-noteType = " + noteType + "]");
+
+    console.log(draggableNotes);
+
+    if (!draggableNotes || draggableNotes.length === 0) {
+      const draggableArea = document.querySelector('#draggableNotes');
+      for (note of notes.get(noteType)) {
+        draggableArea.append(note);
+      }
+    } else {
+      for (note of draggableNotes) {
+        note.parentNode.removeChild(note);
+    }
+    }
+  }
   // target elements with the "draggable" class
   interact('.draggable')
     .draggable({
