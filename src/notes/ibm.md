@@ -1,6 +1,7 @@
 ---
 title: "IBM"
-draggable: "experience"
+noteType: "draggable"
+noteDescription: "test description IBM"
 tags: ["post", "resume"]
 ---
 

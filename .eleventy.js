@@ -6,9 +6,8 @@ module.exports = function(eleventyConfig) {
   // Unsorted items (in whatever order they were added)
   eleventyConfig.addCollection("draggableNotes", function(collectionApi) {
     const draggableNotes = collectionApi.getAll().filter((item) =>  {
-      return 'draggable' in  item.data
+      return 'noteType' in  item.data && item.data.noteType == 'draggable'
     });
-    console.log(draggableNotes[0].data);
     return draggableNotes
   });
 

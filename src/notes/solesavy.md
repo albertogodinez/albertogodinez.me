@@ -1,6 +1,7 @@
 ---
 title: "SoleSavy"
-draggable: "experience"
+noteType: "draggable"
+noteDescription: "test description"
 tags: ["post", "resume"]
 ---
 
