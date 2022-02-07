@@ -2,6 +2,7 @@
 title: "Accenture"
 noteType: "experience"
 position: "Associate Software Engineer"
+dateRange: "1/16 - 1/17"
 isDraggable: true
 tags: ["note", "resume", "experience"]
 ---

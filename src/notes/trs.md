@@ -3,6 +3,7 @@ title: "Teacher Retirement System of Texas"
 noteType: "experience"
 position: "Full-Stack Software Engineer"
 description: "Developed internal health insurance tools"
+dateRange: "9/17 - 1/20"
 isDraggable: true
 tags: ["note", "resume", "experience"]
 ---

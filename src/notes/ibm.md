@@ -3,6 +3,7 @@ title: "IBM"
 noteType: "experience"
 position: "Full-Stack Software Engineer"
 description: "Implemented new internal inventory system"
+dateRange: "2/20 - 6/21"
 isDraggable: true
 tags: ["note", "resume", "experience"]
 ---

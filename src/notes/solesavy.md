@@ -3,6 +3,7 @@ title: "SoleSavy"
 noteType: "experience"
 position: "Software Engineer"
 description: "Developed dashboard for SoleSavy members"
+dateRange: "6/21 - 1/22"
 isDraggable: true
 tags: ["note", "resume", "experience"]
 ---

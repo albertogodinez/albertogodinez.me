@@ -2,6 +2,7 @@
 title: "Naturally Fresh Kicks"
 noteType: "projects"
 description: "E-commerce Site"
+dateRange: "12/21 - "
 isDraggable: true
 tags: ["note", "resume", "project"]
 ---
