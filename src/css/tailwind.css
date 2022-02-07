@@ -52,3 +52,7 @@
   color: #000;
   background-color: #4e4;
 }
+
+.button {
+  @apply bg-green-300 rounded-full w-max border-2 px-2;
+}
