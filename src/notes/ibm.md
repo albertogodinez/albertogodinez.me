@@ -1,7 +1,9 @@
 ---
 title: "IBM"
-noteType: "draggable"
-noteDescription: "test description IBM"
+noteType: "experience"
+position: "Full-Stack Software Engineer"
+description: "test description IBM"
+isDraggable: true
 tags: ["post", "resume"]
 ---
 

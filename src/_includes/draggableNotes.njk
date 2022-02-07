@@ -2,7 +2,11 @@
 {# TODO: Consider just adding title and a description instead of the whole thing #}
 {% for note in draggableNotes %}
 <div id="yes-drop" class="drag-drop">
-  {{note.templateContent | safe}}
+  <h1>{{note.data.title}}</h1>
+  
+  {% if note.data.position%} <h2>{{note.data.position}}</h2> {%- endif %}
+  
+  <h2>{{note.data.description}}</h2>
 </div>
 {% endfor %}
 </div>

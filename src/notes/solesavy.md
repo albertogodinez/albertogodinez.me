@@ -1,11 +1,13 @@
 ---
 title: "SoleSavy"
-noteType: "draggable"
-noteDescription: "test description"
+noteType: "experience"
+position: "Software Engineer"
+description: "test description"
+isDraggable: true
 tags: ["post", "resume"]
 ---
 
-# SoleSavy Experience
+# SoleSavy
 
 • Architected and setup initial frontend environment for the SoleSavy member’s dashboard using NextJS, Redux, TypeScript/Javascript, Tailwind
 CSS, and pulling in data from our Sanity.io instance
