@@ -1,0 +1,8 @@
+<div>
+{# TODO: Consider just adding title and a description instead of the whole thing #}
+{% for note in draggableNotes %}
+<div id="yes-drop" class="drag-drop">
+  {{note.templateContent | safe}}
+</div>
+{% endfor %}
+</div>

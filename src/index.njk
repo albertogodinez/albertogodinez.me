@@ -1,18 +1,27 @@
 ---
-layout: base.html
+layout: layouts/base.njk
 title: Home
 ---
 <!-- TODO: Make sure that I want to keep this script here or in the layout -->
 <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
 
-<div id="no-drop" class="drag-drop"> #no-drop </div>
+
+<div id="no-drop" class="drag-drop"> 
+  #no-drop2
+</div>
 
 <div id="yes-drop" class="drag-drop"> #yes-drop </div>
 
-<div id="outer-dropzone" class="dropzone">
+<!-- <div id="outer-dropzone" class="dropzone">
   #outer-dropzone
   <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
- </div>
+ </div> -->
+
+
+
+{% set draggableNotes = collections.draggableNotes %}
+{% include "draggableNotes.njk" %}
+
 <script>
   // target elements with the "draggable" class
 interact('.draggable')
