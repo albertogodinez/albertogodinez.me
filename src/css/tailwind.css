@@ -7,9 +7,19 @@
 body,
 html {
   /* background-color: hsl(135, 19, 88, 1); */
-  background-color: #222;
+  background-color: rgb(43, 43, 43);
   color: #dae6dd;
   /* background-color: hsl(132, 6, 16); */
+}
+
+header {
+  background-color: #222;
+  @apply flex gap-7 font-bold text-lg px-4 py-2;
+}
+
+header > a:hover {
+  color: white;
+  transition: all ease-in-out 300ms;
 }
 
 #draggableToolBar {
