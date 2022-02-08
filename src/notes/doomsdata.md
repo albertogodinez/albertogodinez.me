@@ -1,4 +1,5 @@
 ---
+layout: layouts/notePage.njk
 title: "Doom's Data"
 noteType: "projects"
 description: "Obtains and calculates player stats using tournament results from the challong.com API"

@@ -1,4 +1,5 @@
 ---
+layout: layouts/notePage.njk
 title: "Teacher Retirement System of Texas"
 noteType: "experience"
 position: "Full-Stack Software Engineer"

@@ -1,4 +1,5 @@
 ---
+layout: layouts/notePage.njk
 title: "Austin Community College"
 noteType: "education"
 description: "Associate of Applied Science in Video Game Design"

@@ -1,4 +1,5 @@
 ---
+layout: layouts/notePage.njk
 title: "Naturally Fresh Kicks"
 noteType: "projects"
 description: "E-commerce Site"

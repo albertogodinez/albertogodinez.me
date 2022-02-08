@@ -1,4 +1,5 @@
 ---
+layout: layouts/notePage.njk
 title: "Accenture"
 noteType: "experience"
 position: "Associate Software Engineer"

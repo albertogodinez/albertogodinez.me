@@ -1,4 +1,5 @@
 ---
+layout: layouts/notePage.njk
 title: "IBM"
 noteType: "experience"
 position: "Full-Stack Software Engineer"

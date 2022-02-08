@@ -1,4 +1,5 @@
 ---
+layout: layouts/notePage.njk
 title: "Texas State University"
 noteType: "education"
 description: "B.A. in Computer Science "
