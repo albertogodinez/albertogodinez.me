@@ -5,26 +5,32 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-<!-- TODO: Make sure that I want to keep this script here or in the layout -->
 <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+<section>
+  <h1>{{metadata.title}}</h1>
+  <p>
+    Hi! I'm Alberto. I'm a software engineer by day but with other little passions on my 
+    free time (<a href="{{ metadata.links.instagramNFK }}">natural dyeing</a>, sneaker connoisseur, enjoying good food & coffee).
+  </p>
+  <p>
+    Below you'll find little snippets of my experience and previous work. Feel free to look around!
+  </p>
+</section>
 
 <button class="button" onclick="handleVisibleNotes('all')">Show All</button>
 <button class="button" onclick="handleVisibleNotes('experience')">Experience</button>
 <button class="button" onclick="handleVisibleNotes('projects')">Projects</button>
 <button class="button" onclick="handleVisibleNotes('education')">Education</button>
 
-<!-- <div id="no-drop" class="drag-drop"> 
-  #no-drop2
-</div>
+<!--
+  <div id="yes-drop" class="drag-drop"> #yes-drop </div>
 
-<div id="yes-drop" class="drag-drop"> #yes-drop </div> -->
-
-<!-- <div id="outer-dropzone" class="dropzone">
+ <div id="outer-dropzone" class="dropzone">
   #outer-dropzone
   <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
- </div> -->
-
-
+ </div> 
+-->
 
 {% set draggableNotes = collections.draggableNotes %}
 {% include "draggableNotes.njk" %}

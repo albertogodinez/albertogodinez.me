@@ -37,18 +37,3 @@ module.exports = function(eleventyConfig) {
 
   }
 }
-
-/*
-    inputPath: './src/test.md',
-    fileSlug: 'test',
-    filePathStem: '/test',
-    data: {
-      eleventy: [Object],
-      pkg: [Object],
-      title: 'How I Create Series of Articles in Eleventy',
-      series: 'Colophon: Finding A Place For My Head',
-      tags: [Array],
-      page: [Object],
-      collections: [Object]
-    },
-*/

@@ -2,10 +2,12 @@
   "title": "Alberto Godinez",
   "url": "https://albertogodinez.me/",
   "language": "en",
-  "socials": {
+  "links": {
     "github": "https://github.com/albertogodinez",
     "twitter": "https://twitter.com/alberto_godinez",
     "instagram": "https://instagram.com/alberto_godinez",
-    "linkedin": "https://www.linkedin.com/in/albertogodinez/"
+    "instagramNFK": "https://www.instagram.com/naturallyfreshkicks/",
+    "linkedin": "https://www.linkedin.com/in/albertogodinez/",
+    "email": "mailto:alberto.godinez90@gmail.com"
   }
 }
