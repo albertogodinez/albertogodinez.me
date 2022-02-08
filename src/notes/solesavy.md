@@ -1,4 +1,5 @@
 ---
+layout: layouts/notePage.njk
 title: "SoleSavy"
 noteType: "experience"
 position: "Software Engineer"

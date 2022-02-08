@@ -18,8 +18,15 @@ header {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   background-color: #222;
-  @apply flex flex-col gap-2 px-4 py-2 justify-center text-center;
+  @apply px-4 py-2 justify-center text-center;
+}
+
+footer > p {
+  @apply pb-2;
 }
 
 header > a:hover {
@@ -149,6 +156,6 @@ header > a:hover {
 }
 
 .link:hover {
-  @apply font-medium text-base underline;
+  @apply font-medium underline;
   transition: all ease-in-out 300ms !important;
 }
