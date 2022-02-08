@@ -86,6 +86,7 @@ eleventyNavigation:
       hideDraggableNotes(noteType);
     }
   }
+
   // target elements with the "draggable" class
   interact('.draggable')
     .draggable({
@@ -120,6 +121,13 @@ eleventyNavigation:
 
   function dragMoveListener (event) {
     var target = event.target
+
+    // add isDragging class
+    // TODO: figure this out
+    /*if (!target.id.includes('isDragging')) {
+      target.id += 'isDragging'
+      console.log(target)
+    }*/
     // keep the dragged position in the data-x/data-y attributes
     var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
     var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
