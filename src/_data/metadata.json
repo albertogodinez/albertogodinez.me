@@ -1,5 +1,11 @@
 {
   "title": "Alberto Godinez",
   "url": "https://albertogodinez.me/",
-  "language": "en"
+  "language": "en",
+  "socials": {
+    "github": "https://github.com/albertogodinez",
+    "twitter": "https://twitter.com/alberto_godinez",
+    "instagram": "https://instagram.com/alberto_godinez",
+    "linkedin": "https://www.linkedin.com/in/albertogodinez/"
+  }
 }
