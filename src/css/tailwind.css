@@ -12,14 +12,18 @@ html {
   /* background-color: hsl(132, 6, 16); */
 }
 
+body {
+  @apply flex flex-col;
+  height: 100vh;
+}
+
 header {
   background-color: #222;
   @apply flex gap-7 font-bold text-lg px-4 py-2;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
+  margin-top: auto;
   width: 100vw;
   background-color: #222;
   @apply px-4 py-2 justify-center text-center;
