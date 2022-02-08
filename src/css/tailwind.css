@@ -17,6 +17,11 @@ header {
   @apply flex gap-7 font-bold text-lg px-4 py-2;
 }
 
+footer {
+  background-color: #222;
+  @apply flex flex-col gap-2 px-4 py-2 justify-center text-center;
+}
+
 header > a:hover {
   color: white;
   transition: all ease-in-out 300ms;
@@ -36,7 +41,7 @@ header > a:hover {
 }
 
 #draggableToolBar {
-  @apply py-2 flex gap-4 justify-center;
+  @apply pb-4 flex gap-4 justify-center;
 }
 
 #draggableNotesArea {
@@ -136,4 +141,14 @@ header > a:hover {
 
 #inner-dropzone {
   height: 80px;
+}
+
+.link {
+  @apply font-extralight text-sm;
+  transition: all ease-in-out 300ms !important;
+}
+
+.link:hover {
+  @apply font-medium text-base underline;
+  transition: all ease-in-out 300ms !important;
 }
