@@ -22,6 +22,19 @@ header > a:hover {
   transition: all ease-in-out 300ms;
 }
 
+#description {
+  @apply flex-col gap-8 justify-around text-center py-16 md:py-24 px-16 md:px-4 text-xl;
+}
+
+#description > p > a {
+  @apply underline;
+}
+
+#description > p > a:hover {
+  @apply no-underline text-white;
+  transition: all ease-in-out 200ms !important;
+}
+
 #draggableToolBar {
   @apply py-2 flex gap-4 justify-center;
 }
