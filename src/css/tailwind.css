@@ -4,12 +4,34 @@
 
 @tailwind utilities;
 
+body,
+html {
+  background-color: hsl(135, 19, 88, 1);
+}
+
 #outer-dropzone {
   height: 140px;
 }
 
 #inner-dropzone {
   height: 80px;
+}
+
+#draggableToolBar {
+  @apply py-2 flex gap-4 justify-center;
+}
+
+.button {
+  background-color: #9dc5a8;
+  border-width: 1px;
+  @apply rounded-full border-gray-700 w-max px-2;
+  transition: all ease-in-out 300ms;
+}
+
+.button:hover {
+  background-color: #262b27;
+  color: white;
+  transition: all ease-in-out 300ms;
 }
 
 .dropzone {
@@ -51,8 +73,4 @@
 .drag-drop.can-drop {
   color: #000;
   background-color: #4e4;
-}
-
-.button {
-  @apply bg-green-300 rounded-full w-max border-2 px-2;
 }

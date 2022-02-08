@@ -7,7 +7,7 @@ eleventyNavigation:
 ---
 <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
 
-<section>
+<div>
   <h1>{{metadata.title}}</h1>
   <p>
     Hi! I'm Alberto. I'm a software engineer by day but with other little passions on my 
@@ -16,12 +16,14 @@ eleventyNavigation:
   <p>
     Below you'll find little snippets of my experience and previous work. Feel free to look around!
   </p>
-</section>
+</div>
 
-<button class="button" onclick="handleVisibleNotes('all')">Show All</button>
-<button class="button" onclick="handleVisibleNotes('experience')">Experience</button>
-<button class="button" onclick="handleVisibleNotes('projects')">Projects</button>
-<button class="button" onclick="handleVisibleNotes('education')">Education</button>
+<div id="draggableToolBar">
+  <button class="button" onclick="handleVisibleNotes('all')">Show All</button>
+  <button class="button" onclick="handleVisibleNotes('experience')">Experience</button>
+  <button class="button" onclick="handleVisibleNotes('projects')">Projects</button>
+  <button class="button" onclick="handleVisibleNotes('education')">Education</button>
+</div>
 
 <!--
   <div id="yes-drop" class="drag-drop"> #yes-drop </div>
