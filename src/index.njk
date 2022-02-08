@@ -25,15 +25,6 @@ eleventyNavigation:
   <button class="button" onclick="handleVisibleNotes('education')">Education</button>
 </div>
 
-<!--
-  <div id="yes-drop" class="drag-drop"> #yes-drop </div>
-
- <div id="outer-dropzone" class="dropzone">
-  #outer-dropzone
-  <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
- </div> 
--->
-
 {% set draggableNotes = collections.draggableNotes %}
 {% include "draggableNotes.njk" %}
 
@@ -59,7 +50,7 @@ eleventyNavigation:
   function showDraggableNotes(noteType) {
     noteVisibility.set(noteType, true);
 
-    const draggableArea = document.querySelector('#draggableNotes');
+    const draggableArea = document.querySelector('#draggableNotesArea');
     
     // append all notes to draggable area
     for (note of notes.get(noteType)) {

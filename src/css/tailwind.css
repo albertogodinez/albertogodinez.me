@@ -6,30 +6,34 @@
 
 body,
 html {
-  background-color: hsl(135, 19, 88, 1);
-}
-
-#outer-dropzone {
-  height: 140px;
-}
-
-#inner-dropzone {
-  height: 80px;
+  /* background-color: hsl(135, 19, 88, 1); */
+  background-color: #222;
+  /* background-color: hsl(132, 6, 16); */
 }
 
 #draggableToolBar {
   @apply py-2 flex gap-4 justify-center;
 }
 
+#draggableNotesArea {
+  @apply border-t-2 border-b-2 border-gray-600;
+  /* border-color: #DAE6DD; */
+  /* background-color: #333; */
+  /* background-color: hsl(132, 6, 16, 0.5); */
+  height: 75vh;
+  /* height: calc(100vh - 15rem); */
+}
+
 .button {
-  background-color: #9dc5a8;
+  background-color: #dae6dd;
   border-width: 1px;
   @apply rounded-full border-gray-700 w-max px-2;
   transition: all ease-in-out 300ms;
 }
 
 .button:hover {
-  background-color: #262b27;
+  /* background-color: #262b27; */
+  background-color: #333;
   color: white;
   transition: all ease-in-out 300ms;
 }
@@ -60,17 +64,46 @@ html {
   padding: 2em 0.5em;
   margin: 1rem 0 0 1rem;
 
-  color: #fff;
-  background-color: #29e;
-  border: solid 2px #fff;
+  color: black;
+  background-color: #98c6b4;
+  border: solid 1px #333;
 
   touch-action: none;
   transform: translate(0px, 0px);
 
   transition: background-color 0.3s;
+  @apply rounded-lg max-w-xs md:max-w-md;
+}
+
+.drag-drop > h1 {
+  @apply font-bold text-lg;
+}
+
+.drag-drop > a {
+  @apply underline;
+}
+
+.drag-drop > a:hover {
+  text-decoration: none;
+}
+
+.thinLargeFont {
+  @apply font-extralight text-lg;
+}
+
+.thinFont {
+  @apply font-extralight;
 }
 
 .drag-drop.can-drop {
   color: #000;
   background-color: #4e4;
+}
+
+#outer-dropzone {
+  height: 140px;
+}
+
+#inner-dropzone {
+  height: 80px;
 }
