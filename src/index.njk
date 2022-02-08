@@ -27,34 +27,61 @@ title: Home
 {% include "draggableNotes.njk" %}
 
 <script>
-  const notes = new Map();
+  const notes = new Map(); // key: noteType, value: html element
+  const noteVisibility = new Map(); // key: noteType, value: isVisible boolean
 
+  // save notes elements to variable to remove/add in future
   window.addEventListener("load", () => {
     [...document.querySelectorAll("[data-isDraggable = true]")].forEach((note) => {
-      const key = note.getAttribute('data-noteType')
+      const key = note.getAttribute('data-noteType');
       if (notes.has(key)) {
-        notes.set(notes.get(key).push(note))
+        const updatedNotes = notes.get(key);
+        updatedNotes.push(note);
+        notes.set(key, updatedNotes)
       } else {
-        notes.set(key, [note])
+        notes.set(key, new Array(note))
+        noteVisibility.set(key, true);
       }
     })
   });
 
+  function showDraggableNotes(noteType) {
+    noteVisibility.set(noteType, true);
+
+    const draggableArea = document.querySelector('#draggableNotes');
+    
+    // append all notes to draggable area
+    for (note of notes.get(noteType)) {
+      draggableArea.append(note);
+    }
+  }
+
+  function hideDraggableNotes(noteType) {
+    noteVisibility.set(noteType, false);
+
+    const draggableNotes = document.querySelectorAll("[data-noteType = " + noteType + "]");
+    // remove all notes from DOM
+    for (note of draggableNotes) {
+      note.parentNode.removeChild(note);
+    }
+  }
+
   // handle which notes are shown
   function handleVisibleNotes (noteType) {
-    const draggableNotes = document.querySelectorAll("[data-noteType = " + noteType + "]");
-
-    console.log(draggableNotes);
-
-    if (!draggableNotes || draggableNotes.length === 0) {
-      const draggableArea = document.querySelector('#draggableNotes');
-      for (note of notes.get(noteType)) {
-        draggableArea.append(note);
+    if (noteType === 'all') {
+      // iterate through each note and show if hidden
+      for (key of notes.keys()) {
+        // console.log('current key: ' + key)
+        // skip 'all' since that's not a valid noteType
+        if (key !== 'all' && !noteVisibility.get(key)) {
+          // notes are hidden so need to show
+          showDraggableNotes(key);
+        }
       }
-    } else {
-      for (note of draggableNotes) {
-        note.parentNode.removeChild(note);
-    }
+    } else if (!noteVisibility.get(noteType)) { // notes are hidden
+      showDraggableNotes(noteType);
+    } else { // notes are visibel
+      hideDraggableNotes(noteType);
     }
   }
   // target elements with the "draggable" class
