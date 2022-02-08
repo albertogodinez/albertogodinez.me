@@ -7,6 +7,10 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/styles.css">
   </head>
+  <header>
+    <a href="{{ '/' | url }}">home</a>
+    <a href="{{page.url}}img/Alberto_Godinez_2022.pdf">cv</a>
+  </header>
   <body>
     <main>
       {{ content | safe }}
